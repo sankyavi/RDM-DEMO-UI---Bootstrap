@@ -1,25 +1,21 @@
-<div class="row">
-    <div class="input-field col s9 m9">
-        <i class="material-icons prefix">mode_edit</i>
-        <input id="master" type="text" class="validate filter-input" [(ngModel)]=query (keyup)=filter()>
-        <label for="master">Master</label>
-    </div>
-    <div class="col s3 m3">
-        <button class="z-depth-5" class="btn waves-effect waves-light" (click)="onClick()">Search
-    <i class="material-icons right">search</i>
-  </button>
-    </div>
-</div>
-<div class="row">
-    <div class="suggestions col s12 m12" *ngIf="filteredList.length > 0">
-        <a *ngFor="let item of filteredList">
-            <div class="chip" (click)="select(item)">
-                {{item}}
+<div class="autocomplete">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group row">
+                <div class="col-12">
+                    <input [(ngModel)]=query (keyup)=filter() class="form-control" type="text"  id="example-text-input">
+                </div>
             </div>
-        </a>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-primary" (click)="onClick()">Search</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="suggestions col s12 m12" *ngIf="filteredList.length > 0">
+            <span *ngFor="let item of filteredList" class="badge badge-default lefty" (click)="select(item)">
+                {{item}}
+            </span>
+        </div>
     </div>
 </div>
-<!--<div class="collection">
-    <a *ngFor="let item of filteredList" (click)="select(item)" class="collection-item blue-text">{{item}}</a>
-</div>-->
-<br>

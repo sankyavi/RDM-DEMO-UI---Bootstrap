@@ -10,7 +10,22 @@ import { Router} from '@angular/router';
 
 @Component({
     selector: 'my-app',
-    templateUrl: './app/app.component.html'
+    templateUrl: './app/app.component.html',
+    styles: [`
+        // .padit {
+        //     padding: 10px;
+        // }
+    //     main {
+    //     padding-left: 260px;
+    //   }
+    //    #aside {
+    //     color:cadetblue;
+    //   }
+
+        // aside, main {
+        //   height:100vh;
+        // }
+    `]
 })
 export class AppComponent {
     title = "reference Table managmanent App";

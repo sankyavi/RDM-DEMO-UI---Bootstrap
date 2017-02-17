@@ -26,17 +26,17 @@
             "id": 7,
             "code": "1",
             "value": "Chennai",
-            "effectiveStartDate": "2017-10-31T18:30:00.000Z",
-            "effectiveEndDate": "2019-10-31T18:30:00.000Z",
-            "status": "active"
+            "effectiveStartDate": "2017-10-31",
+            "effectiveEndDate": "2019-10-31",
+            "status": "Active"
         },
         {
             "id": 8,
             "code": "2",
             "value": "Mumbai",
-            "effectiveStartDate": "2017-11-30T18:30:00.000Z",
-            "effectiveEndDate": "2019-11-30T18:30:00.000Z",
-            "status": "inactive"
+            "effectiveStartDate": "2017-11-30",
+            "effectiveEndDate": "2019-11-30",
+            "status": "Inactive"
         }
     ],
     "totalreferences": 27

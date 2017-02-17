@@ -6,20 +6,22 @@ import { Router } from '@angular/router';
  * @author Avinash 
  * @export AutocompleteComponent
  * @class AutocompleteComponent
- * @record Avinash 1/20/2017 updated functinality 1
- * @record Avinash 1/30/2017 removed functinality 2
  */
 
 @Component({
     selector: 'autocomplete',
     templateUrl: './app/components/autocomplete/autocomplete.component.html',
     styles: [`
-        .collection-item {
-            background-color:#fff;
+        .autocomplete {
+            padding: 10px;
+            margin : 10px;
         }
-        a {
+        span {
 			cursor: pointer;
 			cursor: hand;
+		}
+		.lefty {
+			padding-left : 10px;
 		}
     `]
 })
@@ -27,8 +29,7 @@ import { Router } from '@angular/router';
 
 export class AutocompleteComponent implements OnInit {
     query: string = '';
-    masters1 : string[] = [];
-    //masters : string[] = [ "Lob Master","Plan Option Master","Plan Variant Master","Master","Coverage Master","Services Master","Standard Exclusions Master","ICD Master"];
+    masters1: string[] = [];
     filteredList: string[] = [];
 
     constructor(private router: Router) { }

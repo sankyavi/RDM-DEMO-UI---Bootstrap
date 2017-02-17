@@ -15,21 +15,36 @@ import { LocalStorageService } from '/app/services/localstorage.service';
 	selector: 'app-dashboard',
 	templateUrl: './app/components/dashboard/dashboard.component.html',
 	styles: [`
-		.lefty {
-			text-align : left;
-			padding-left : 15px;
-		}
-		.leftyname {
-			text-align : left;
-			padding-left : 30px;
-		}
-		a:first-of-type {
-			padding-left: 15px;
-		}
-		a {
-			cursor: pointer;
-			cursor: hand;
-		}
+			span {
+				cursor: pointer;
+				cursor: hand;
+			}
+			.dashboard {
+				margin-top:10px;
+			}
+			.summary {
+				padding-left:15px;
+				padding-bottom:40px;
+				padding-top:40px;
+			}
+			.breadcrumb {
+				width:100vw;
+			}
+			// .lefty {
+			// 	text-align : left;
+			// 	padding-left : 5px;
+			// }
+		// .leftyname {
+		// 	text-align : left;
+		// 	padding-left : 30px;
+		// }
+		// a:first-of-type {
+		// 	padding-left: 15px;
+		// }
+		// a {
+		// 	cursor: pointer;
+		// 	cursor: hand;
+		// }
 	`]
 })
 export class DashboardComponent implements OnInit {

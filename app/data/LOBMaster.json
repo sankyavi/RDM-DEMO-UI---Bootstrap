@@ -5,25 +5,25 @@
             "id": 1,
             "code": "HLTH",
             "value": "Health",
-            "effectiveStartDate": "2017-10-31T18:30:00.000Z",
-            "effectiveEndDate": "2019-10-31T18:30:00.000Z",
-            "status": "active"
+            "effectiveStartDate": "2017-10-31",
+            "effectiveEndDate": "2019-10-31",
+            "status": "Active"
         },
         {
             "id": 2,
             "code": "TRA",
             "value": "Travel",
-            "effectiveStartDate": "2017-11-30T18:30:00.000Z",
-            "effectiveEndDate": "2019-11-30T18:30:00.000Z",
-            "status": "active"
+            "effectiveStartDate": "2017-11-30",
+            "effectiveEndDate": "2019-11-30",
+            "status": "Active"
         },
         {
             "id": 3,
             "code": "PA",
             "value": "Personal Accident",
-            "effectiveStartDate": "2017-11-30T18:30:00.000Z",
-            "effectiveEndDate": "2019-11-30T18:30:00.000Z",
-            "status": "active"
+            "effectiveStartDate": "2017-11-30",
+            "effectiveEndDate": "2019-11-30",
+            "status": "Active"
         }
     ],
     "totalreferences": 27

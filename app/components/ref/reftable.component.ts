@@ -41,6 +41,13 @@ import { LocalStorageService } from '/app/services/localstorage.service';
     text-decoration: none;
     color: inherit;
     }
+    .card {
+      padding : 5px 10px;
+      background-color: #FFFBFF;
+    }
+    .editmaster { 
+      margin-top:10px;
+    }
 	`]
 })
 
@@ -66,19 +73,6 @@ export class RefTableComponent {
     private _localStorageService: LocalStorageService) { }
 
   private ngOnInit() {
-
-    $(document).ready(function () {
-      $('select').material_select();
-      $('.datepicker').pickadate({
-        selectMonths: true, // Creates a dropdown to control month
-        selectYears: 10 // Creates a dropdown of 15 years to control year
-      });
-      $('.datepicker1').pickadate({
-        selectMonths: true, // Creates a dropdown to control month
-        selectYears: 10 // Creates a dropdown of 15 years to control year
-      });
-    });
-
     this._routeParams.params
       .map(params => params['id'])
       .switchMap(id => this._refService.getData(id))
