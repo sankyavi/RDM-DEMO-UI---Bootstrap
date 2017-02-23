@@ -9,9 +9,9 @@ import { LocalStorageService } from '/app/services/localstorage.service';
 
 
 /**
- * 
- * @author 
- * @export 
+ * @description This will load the references and aloow editing and adding new references
+ * @author Avinash
+ * @export RefTableComponent
  * @class RefTableComponent
  */
 @Component({
@@ -95,10 +95,6 @@ export class RefTableComponent {
   // private ngOnDestroy() {
   //   this.sub.unsubscribe();
   // }
-
-
-
-
 
   getDesc() {
     let arraytemp: string[] = this.master_name.split(' ');

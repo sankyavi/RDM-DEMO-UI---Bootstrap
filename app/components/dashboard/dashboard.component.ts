@@ -30,21 +30,6 @@ import { LocalStorageService } from '/app/services/localstorage.service';
 			.breadcrumb {
 				width:100vw;
 			}
-			// .lefty {
-			// 	text-align : left;
-			// 	padding-left : 5px;
-			// }
-		// .leftyname {
-		// 	text-align : left;
-		// 	padding-left : 30px;
-		// }
-		// a:first-of-type {
-		// 	padding-left: 15px;
-		// }
-		// a {
-		// 	cursor: pointer;
-		// 	cursor: hand;
-		// }
 	`]
 })
 export class DashboardComponent implements OnInit {

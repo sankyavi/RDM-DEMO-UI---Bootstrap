@@ -40,11 +40,13 @@ export class AutocompleteComponent implements OnInit {
 
     filter() {
         if (this.query !== "") {
-            this.filteredList = this.masters1.filter(function (el: string) {
-                //return el.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
-                // use above if polyfill required for below
-                return el.toLowerCase().includes(this.query.toLowerCase());
-            }.bind(this));
+            if(this.query.length >= 2){
+                this.filteredList = this.masters1.filter(function (el: string) {
+                    //return el.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
+                    // use above if polyfill required for below
+                    return el.toLowerCase().includes(this.query.toLowerCase());
+                }.bind(this));
+            }
         } else {
             this.filteredList = [];
         }

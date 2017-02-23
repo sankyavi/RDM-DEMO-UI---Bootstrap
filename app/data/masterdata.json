@@ -1,40 +1,432 @@
 {
     "masterdata": [
         {
-            "name": "LOB Master",
-            "description": "List of LOB's"
+            "name": "Attribute Master",
+            "description": "List of Attributes"
         },
         {
-            "name": "Plan Option Master",
-            "description": "Store the relevant plan option"
-        },
-        {
-            "name": "Plan Variant Master",
-            "description": "Store the relevant plan variant"
-        },
-        {
-            "name": "Coverage Master",
-            "description": "Store the Coverages"
-        },
-        {
-            "name": "Services Master",
-            "description": "Store the Services"
-        },
-        {
-            "name": "Exclusions Master",
-            "description": "Store the Exclusions"
-        },
-        {
-            "name": "ICD Master",
-            "description": "Store the ICD codes"
+            "name": "Channel master",
+            "description": "This indicates the various sales channels available for a product"
         },
         {
             "name": "City Master",
-            "description": "Store the Cities"
+            "description": "List of Cities"
         },
         {
-            "name": "Zone Master",
-            "description": "Store the Zones"
+            "name": "Copay Payout Type master ",
+            "description": "List of different Copay Payout Types in AMHI"
+        },
+        {
+            "name": "Cost Sharing Master",
+            "description": "This Master will store the different types Cost sharing options which could be used during product /coverage setup in AMHI. For e.g. Copay, Deductible and Franchise"
+        },
+        {
+            "name": "Coverage master",
+            "description": "This master will hold the list of coverages offered by AMHI"
+        },
+        {
+            "name": "Coverage Type Master",
+            "description": "This will include the various types in which a Coverage can be categorized."
+        },
+        {
+            "name": "Currency Master",
+            "description": "This will include the various types of currencies used in transactions."
+        },
+        {
+            "name": "DateType Master",
+            "description": "This Master will hold the different types dates which could be used during setting up the Coverage Incidence"
+        },
+        {
+            "name": "Deductible Payout Type master ",
+            "description": "List of different Deductible Payout Types in AMHI"
+        },
+        {
+            "name": "Duration Master",
+            "description": "This Master will hold the different types of durations used within AMHI - Year, Months, Weeks, Days, Hours, Minutes etc"
+        },
+        {
+            "name": "Grid Broken Bones",
+            "description": "Master to determine percentage of SI given to the insured in case of a broken bone(s)"
+        },
+        {
+            "name": "Grid Master",
+            "description": "This will include the various types of Grids available in AMHI"
+        },
+        {
+            "name": "Grid PPD",
+            "description": "Master to determine percentage of SI given to the insured in case of a permanent partial disablement"
+        },
+        {
+            "name": "Grid PTD",
+            "description": "Master to determine percentage of SI given to the insured in case of a permanent total disablement"
+        },
+        {
+            "name": "ICD Group master",
+            "description": "This will contain the grouping of ICD-10 codes"
+        },
+        {
+            "name": "ICD master",
+            "description": "This will contain the list of all ICD-10 codes"
+        },
+        {
+            "name": "Incidence Master",
+            "description": "This Master will hold the different types of Incidence which could occur, reported, prevailed during the Product setup and will be used for Claim processing"
+        },
+        {
+            "name": "LOB Master",
+            "description": "This master will store the relevant LOB present in AMHI. E.g., Health, Travel, PA."
+        },
+        {
+            "name": "Network Type Lookup",
+            "description": "List of Network Types"
+        },
+        {
+            "name": "Payout Cap Type Master",
+            "description": "This will include the various types of cap for a Payout"
+        },
+        {
+            "name": "Payout Freq Type Master",
+            "description": "This will include the various types of frequency by which a Payout can be made for a Coverage"
+        },
+        {
+            "name": "Payout Method Master",
+            "description": "This will include the various types in which a Payout can be made for a Coverage"
+        },
+        {
+            "name": "Payout Trigger Master",
+            "description": "This will include the various types of triggers that can lead to a Claim or Payout"
+        },
+        {
+            "name": "Pincode Master",
+            "description": "List of all Pincodes "
+        },
+        {
+            "name": "Plan option master",
+            "description": "Store the relevant plan options present in AMHI. E.g., Individual, Family/Floater"
+        },
+        {
+            "name": "Plan variant master",
+            "description": "Store the relevant plan variants present in AMHI. E.g., Standard, Exclusive, Premium; Gold, Silver, Bronze etc."
+        },
+        {
+            "name": "Procedure Group master",
+            "description": "This will contain a grouping of Procedure codes"
+        },
+        {
+            "name": "Procedure master",
+            "description": "This will contain the list of all Procedure codes"
+        },
+        {
+            "name": "Product Rider Mapping",
+            "description": "Master to create the mapping between a Base Product and the Rider"
+        },
+        {
+            "name": "Product Segment Master",
+            "description": "Master to capture all product segments"
+        },
+        {
+            "name": "Reasons master",
+            "description": "This will contain a list of reasons used with the manual/system workflows."
+        },
+        {
+            "name": "Relationship Master",
+            "description": "This will include the Relationship codes used in CARE"
+        },
+        {
+            "name": "Rider Master",
+            "description": "This will contain the list of Riders available in CARE"
+        },
+        {
+            "name": "Room Type master",
+            "description": "List of different room types/categories in AMHI"
+        },
+        {
+            "name": "Services Master",
+            "description": "Stores the available services in AMHI that will be offered under a coverage"
+        },
+        {
+            "name": "Sub channel master",
+            "description": "This indicates the various sub-channels available for a product"
+        },
+        {
+            "name": "Sublimit Type Master",
+            "description": "This will include the various types of Sublimits that can be applied."
+        },
+        {
+            "name": "Zone master",
+            "description": "List of Zones"
+        },
+        {
+            "name": "State",
+            "description": "Includes the states "
+        },
+        {
+            "name": "Taluka/ District",
+            "description": "Includes the district/talukas inside a state "
+        },
+        {
+            "name": "City/Village",
+            "description": "Includes the city/village inside a district/taluka"
+        },
+        {
+            "name": "Ownership type",
+            "description": "Includes the type of ownerships possible for provider enterprise (eg. Partnership)"
+        },
+        {
+            "name": "Recognized by",
+            "description": "Includes the recognition organizations (eg. ICRA)"
+        },
+        {
+            "name": "Major Services Available",
+            "description": "Includes the major servies offered by the provider (eg. IP)"
+        },
+        {
+            "name": "IP services",
+            "description": "Includes the servies offered inside the IP by the provider (eg. Single speciality)"
+        },
+        {
+            "name": "OP services",
+            "description": "Includes the servies offered inside the OP by the provider (eg. Consultation)"
+        },
+        {
+            "name": "Daycare services",
+            "description": "Includes the servies offered inside the Daycare by the provider (eg. Dialysis)"
+        },
+        {
+            "name": "Health check services",
+            "description": "Includes the servies offered inside the Health check by the provider (eg. Complete health check)"
+        },
+        {
+            "name": "Known Clinical Sepciality",
+            "description": "Includes the clinical speciality for which the provider is known for (eg. Medanta for Cardiac)"
+        },
+        {
+            "name": "Known Economical Specility",
+            "description": "Includes the economical speciality for which the provider is known for (eg. Aravind eye care for opthamology)"
+        },
+        {
+            "name": "Specialties available",
+            "description": "Includes the various specialties that are available for a hospital"
+        },
+        {
+            "name": "Service/ Facilities detail",
+            "description": "Includes the various services/facilities that are available for a hospital"
+        },
+        {
+            "name": "Equipments category",
+            "description": "Includes the categories under which equipments are listes (eg. Cardiology-ECG)"
+        },
+        {
+            "name": "Laboratory services",
+            "description": "Includes the Infrastructure under the laboratory services"
+        },
+        {
+            "name": "Imaging service",
+            "description": "Includes the Infrastructure under the Imaging services"
+        },
+        {
+            "name": "Bed categories available",
+            "description": "Includes the bed categories available"
+        },
+        {
+            "name": "Performance parameter",
+            "description": "Includes the performance parameter for a provider"
+        },
+        {
+            "name": "Computer used",
+            "description": "Includes the services for which computers are used for a provider (eg. Billing)"
+        },
+        {
+            "name": "Facilities",
+            "description": "Includes the facilities available inside the provider infrastructure (eg. ICUs)"
+        },
+        {
+            "name": "Facilities available in Operation theater/Area:",
+            "description": "Includes the facilities available inside the Operation theater"
+        },
+        {
+            "name": "Inhouse service",
+            "description": "Includes the inhouse services of the provider (eg. Laundry)"
+        },
+        {
+            "name": "Out sourced service",
+            "description": "Includes the outsourced services of the provider (eg. food)"
+        },
+        {
+            "name": "Hospital areas with back-up facility",
+            "description": "Includes the areas with the power backup facility"
+        },
+        {
+            "name": "Infrastructure Grading parameter",
+            "description": "Includes the infrastructure parameters to be used for provider scoring and grading"
+        },
+        {
+            "name": "Accreditation",
+            "description": "Includes the accreditations agencies "
+        },
+        {
+            "name": "Patient safety measure",
+            "description": "Includes the patient safety measures grading parameters followed by the provider for patient safety"
+        },
+        {
+            "name": "Quality Maintenance/Quality Check",
+            "description": "Includes the quality maintenance/quality check followed by the provider for patient safety"
+        },
+        {
+            "name": "Exception Case Approval",
+            "description": "Contains the list of reasons for approving an exception case "
+        },
+        {
+            "name": "Exception Case Rejection Reason",
+            "description": "Contains the list of reasons for rejecting an exception case "
+        },
+        {
+            "name": "Exception Case On-Hold Reason",
+            "description": "Contains the list of reasons for putting an exception case on hold"
+        },
+        {
+            "name": "Empanelment Request Rejection Reason",
+            "description": "Contains the list of reasons for rejecting an empanelment request during tariff negotiation stage or final approval"
+        },
+        {
+            "name": "Empanelment Request On-Hold Reason",
+            "description": "Contains the list of reasons for putting an empanelment request on hold during final approval"
+        },
+        {
+            "name": "AMHI Administrative Office Name",
+            "description": "Indicates the various AMHI offices for administrative operations"
+        },
+        {
+            "name": "Information Category",
+            "description": "Contains the categories of information for which an update request can be received"
+        },
+        {
+            "name": "Provider information update request rejection Reason",
+            "description": "Contains the list of reasons for rejecting an exception case "
+        },
+        {
+            "name": "Provider information update request on-hold Reason",
+            "description": "Contains the list of reasons for putting an exception case on hold"
+        },
+        {
+            "name": "Network Type",
+            "description": "Contains list of types of network that can be created"
+        },
+        {
+            "name": "Services Provided",
+            "description": "List of the main services that are available for the network in consideration"
+        },
+        {
+            "name": "Geography",
+            "description": "Indicates the region/geography of the providers which are a part of the network"
+        },
+        {
+            "name": "Network creation & modification request closed Reason",
+            "description": "Contains the list of reasons for closing a network creation or network modification request during first level of approval"
+        },
+        {
+            "name": "Network creation & modification request Rejected Reason",
+            "description": "Contains the list of reasons for rejecting a network creation or network modification request during first final approval"
+        },
+        {
+            "name": "Network creation & modification request On-Hold Reason",
+            "description": "Contains the list of reasons for putting a network creation or network modification request on hold during first final approval"
+        },
+        {
+            "name": "Reason for status change / tagging",
+            "description": "Indicates reason for changing the status or tagging a provider"
+        },
+        {
+            "name": "Status change/tagging request rejection Reason",
+            "description": "Contains the list of reasons for rejecting a provider status change / tagging request during approval"
+        },
+        {
+            "name": "Status change/tagging request On Hold Reason",
+            "description": "Contains the list of reasons for putting a provider status change / tagging request on hold during approval"
+        },
+        {
+            "name": "AMHI Preferred Provider Benefits",
+            "description": "Includes the AMHI standard Preferred Provider Benefits"
+        },
+        {
+            "name": "Member Preferred Provider Benefits",
+            "description": "Includes the AMHI standard Member Preferred Provider Benefits"
+        },
+        {
+            "name": "AMHI standard inclusive items",
+            "description": "Include the list of items inside AMHI standard inclusive items"
+        },
+        {
+            "name": "AMHI standard exclusive items",
+            "description": "Include the list of items inside AMHI standard exclusive items"
+        },
+        {
+            "name": "AMHI standard Department Category",
+            "description": "Include the list of items inside AMHI standard Department Category items"
+        },
+        {
+            "name": "AMHI standard Department Sub-Category",
+            "description": "Include the list of items inside AMHI standard Department Sub-Category items"
+        },
+        {
+            "name": "AMHI standard packages ",
+            "description": "Include the list of items inside AMHI standard packages  items"
+        },
+        {
+            "name": "ICD Codes",
+            "description": "Include the list of ICD codes with descriptions"
+        },
+        {
+            "name": "CPT Codes",
+            "description": "Include the list of CPT codes with descriptions"
+        },
+        {
+            "name": "AMHI standard Procedure Category",
+            "description": "Include the list of items inside AMHI standard Procedure Category items"
+        },
+        {
+            "name": "AMHI standard Procedure Sub-Category",
+            "description": "Include the list of items inside standard Procedure Sub-Category items"
+        },
+        {
+            "name": "AMHI standard investigation Category",
+            "description": "Include the list of items inside AMHI standard investigation Category items"
+        },
+        {
+            "name": "AMHI standard investigation Sub-Category",
+            "description": "Include the list of items inside standard investigation Sub-Category items"
+        },
+        {
+            "name": "AMHI standard Line Items Category",
+            "description": "Include the list of items inside AMHI standard Line Items Category items"
+        },
+        {
+            "name": "AMHI standard Line Items Sub-Category",
+            "description": "Include the list of items inside AMHI standard Line Items Sub-Category items"
+        },
+        {
+            "name": "AMHI Standard Drug master",
+            "description": "Includes the AMHI standard Drug name, code and other details"
+        },
+        {
+            "name": "AMHI standard implants and consummables",
+            "description": "Includes the AMHI standard implants and consummables name, code and other details"
+        },
+        {
+            "name": "Graduation Type",
+            "description": "Includes the graduation type list "
+        },
+        {
+            "name": "Post Graduation Type",
+            "description": "Includes the Post Graduation  type list "
+        },
+        {
+            "name": "PG Diploma / Fellowship",
+            "description": "Includes the PG Diploma / Fellowship type, speciality and super speciality"
+        },
+        {
+            "name": "Provider Department Category",
+            "description": "Includes the PG Diploma / Fellowship type, speciality and super speciality"
         }
     ]
 }
