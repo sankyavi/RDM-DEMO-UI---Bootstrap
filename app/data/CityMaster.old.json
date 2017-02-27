@@ -1,0 +1,43 @@
+{
+    "name": "City Master",
+    "link": {
+        "linkType": "Zone",
+        "values": [
+            {
+                "linkId": 3,
+                "linkName": "West"
+            },
+            {
+                "linkId": 4,
+                "linkName": "East"
+            },
+            {
+                "linkId": 5,
+                "linkName": "North"
+            },
+            {
+                "linkId": 6,
+                "linkName": "South"
+            }
+        ]
+    },
+    "references": [
+        {
+            "id": 7,
+            "code": "1",
+            "value": "Chennai",
+            "effectiveStartDate": "2017-10-31",
+            "effectiveEndDate": "2019-10-31",
+            "status": "Active"
+        },
+        {
+            "id": 8,
+            "code": "2",
+            "value": "Mumbai",
+            "effectiveStartDate": "2017-11-30",
+            "effectiveEndDate": "2019-11-30",
+            "status": "Inactive"
+        }
+    ],
+    "totalreferences": 27
+}
