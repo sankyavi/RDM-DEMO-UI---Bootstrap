@@ -26,59 +26,80 @@
     </div>
 
 
-    <form>
-      <fieldset class="card">
-        <legend class="card z-depth-1 grey lighten-2 pad">Add Record Details</legend>
+    <div class="col-6" *ngIf="linkflag">
+      <div class="form-group">
+        <label for="Select1">Choose your {{linktype}}</label>
+        <select (change)="change()" class="form-control" id="Select1">
+         <option value="" disabled>Choose your option</option>
+         <option *ngFor="let val of linkvalues">{{val.linkName}}</option>
+        </select>
+      </div>
+    </div>
+
+
+    <form *ngIf="!linkflag">
+      <fieldset class="card form-group">
+        <legend class="card legendary">Add Record Details</legend>
         <div class="row">
-          <div class="col s6 m6">
-            <i class="material-icons prefix">mode_edit</i><input type="text" autocomplete placeholder="Code"><br>
-          </div>
-          <div class="col s6 m6">
-            <i class="material-icons prefix">mode_edit</i><input type="text" autocomplete placeholder="Name"><br>
-          </div>
-          <div class="col s12 m12">
-            <i class="material-icons prefix">mode_edit</i><input type="text" autocomplete placeholder="Description"><br>
-          </div>
-          <div class="col s6 m6">
-            <i class="material-icons prefix">today</i><input type="date" class="datepicker" placeholder="Effective date"><br>
-          </div>
-          <div class="col s6 m6">
-            <i class="material-icons prefix">today</i><input type="date" class="datepicker1" placeholder="Expiry date">
-          </div>
-          <p></p>
-          <!-- Switch -->
-          <div class="col s6 m6">
-            <i class="material-icons prefix">spellcheck</i>
-            <div class="switch bringdown">
-              <span class="col s2 m2">Status: </span>
-              <label>
-          <i class="material-icons iconshift prefix">visibility_off</i>Inactive
-          <input type="checkbox">
-          <span class="lever"></span>
-          <i class="material-icons iconshift prefix">visibility</i>Active
-        </label>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="code">Code</label>
+              <input type="text" class="form-control" id="code" placeholder="Enter Here">
             </div>
           </div>
-          <div class="input-field col s6 m6 offset-s6 offset-m6" *ngIf="linkflag">
-            <select>
-          <option value="" disabled selected>Choose your option</option>
-          <option *ngFor="let val of linkvalues; let i = index;" value="{{val.linkId}}">{{val.linkName}}</option>
-          <!--<option value="1">South</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>-->
-        </select>
-            <label>{{linktype}}</label>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter Here">
+            </div>
           </div>
+          <div class="col-12">
+            <div class="form-group">
+              <label for="description">Description</label>
+              <input type="text" class="form-control" id="description" placeholder="Enter Here">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="example-date-input" class="col-2 col-form-label">Date</label>
+              <div class="col-10">
+                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="example-date-input" class="col-2 col-form-label">Date</label>
+              <div class="col-10">
+                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-6">
+            <div class="form-group row">
+              <label class="col-sm-2">Status</label>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Active
+          </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="col s4 m4 offset-s8 offset-m8">
-            <a class="waves-effect waves-light btn" [routerLink]="['/dashboard']"><i class="material-icons left">clear</i>Cancel</a>
-            <a class="waves-effect waves-light btn"><i class="material-icons left">done_all</i>Add Record</a>
+            <button type="button" [routerLink]="['/dashboard']" class="btn btn-warning">Cancel</button>
+            <button type="button" class="btn btn-primary">Add Record</button>
           </div>
         </div>
       </fieldset>
     </form>
 
-    <table class="table">
-      <thead>
+    <table class="table table-bordered">
+      <thead class="thead-inverse">
         <tr>
           <th>{{master_type + ' Code'}}</th>
           <th>{{master_type + ' Name'}}</th>

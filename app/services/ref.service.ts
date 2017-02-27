@@ -16,7 +16,11 @@ export class RefService {
     constructor(private _http: Http) { }
 
     getData(id: string) {
-        let url = './app/data/' + id + '.json';
+        var url = './app/data/' + id + '.json';
+        if(id === 'masterdata'){
+            console.info('reached ova here');
+           // url = 'insert url here';
+        }
         console.log("url in service call: " + url);
         return this._http.get(url).map((res: Response) => res.json());
     }

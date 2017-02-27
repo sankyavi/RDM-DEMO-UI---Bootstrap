@@ -43,10 +43,14 @@ import { LocalStorageService } from '/app/services/localstorage.service';
     }
     .card {
       padding : 5px 10px;
-      background-color: #FFFBFF;
+      background-color: #FCFCFC;
     }
     .editmaster { 
       margin-top:10px;
+    }
+    .legendary {
+      width:230px;
+      background-color: #eceeef;
     }
 	`]
 })
@@ -129,5 +133,9 @@ export class RefTableComponent {
 
   generateKeys(obj) {
     return Object.keys(obj).map((key) => { return key });
+  }
+
+  change() {
+    this.linkflag = false;
   }
 }
