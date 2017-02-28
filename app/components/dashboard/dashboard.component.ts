@@ -52,7 +52,7 @@ export class DashboardComponent implements OnInit {
 	goto(table: string) {
 		var mastertable = table.split(' ').join('');
 		console.log("dashboard :: mastertable : " + mastertable);
-		this.router.navigate(['reference-details', mastertable]);
+		this.router.navigate(['/reference-details', mastertable,"chumma"]);
 	}
 
 	saveDescription() {

@@ -58,6 +58,7 @@ import { LocalStorageService } from '/app/services/localstorage.service';
 export class RefTableComponent {
 
   private id: any;
+  private id2: any;
   private master_name: string;
   private master_desc: string;
 
@@ -78,19 +79,42 @@ export class RefTableComponent {
 
   private ngOnInit() {
     this._routeParams.params
-      .map(params => params['id'])
-      .switchMap(id => this._refService.getData(id))
+      .subscribe(
+      params => {
+        //params => params['id']
+        this.id = params['id'];
+        this.id2 = params['id2'];
+        console.info("params1"+this.id);
+      console.info("params1"+this.id2);
+      }
+      )
+      // .switchMap(id => this._refService.getData(id))
+      // .retry(2)
+      // .subscribe(
+      // data => {
+      //   this.master_name = data.name;
+      //   this.link = data.link;
+      //   this.getDesc()
+      //   this.references = data.references;
+      //   this.noofrecords = data.totalreferences;
+      // },
+      // err => { console.log('err occured' + err) },
+      // () => { console.log('done' + this.id2) }
+      // )
+      console.info("params1"+this.id);
+      console.info("params1"+this.id2);
+      this._refService.getData(this.id)
       .retry(2)
       .subscribe(
-      data => {
-        this.master_name = data.name;
-        this.link = data.link;
-        this.getDesc()
-        this.references = data.references;
-        this.noofrecords = data.totalreferences;
-      },
-      err => { console.log('err occured' + err) },
-      () => { console.log('done') }
+        data => {
+          this.master_name = data.name;
+          this.link = data.link;
+          this.getDesc()
+          this.references = data.references;
+          this.noofrecords = data.totalreferences;
+        },
+        err => { console.log('err occured' + err) },
+        () => { console.log('done' + this.id2) }
       )
   }
 

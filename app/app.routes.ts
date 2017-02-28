@@ -13,5 +13,5 @@ export const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: DummyComponent },
     { path: 'dashboard', component: DashboardComponent },
-    { path: 'reference-details/:id', component: RefTableComponent }
+    { path: 'reference-details/:id/:id2', component: RefTableComponent }
 ];
