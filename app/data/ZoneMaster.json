@@ -5,8 +5,6 @@
             "id": 3,
             "code": "W",
             "value": "West",
-            "type": "Zone",
-            "description": "Zone Master Entries",
             "effectiveStartDate": "2017-10-31",
             "effectiveEndDate": "2019-10-31",
             "status": "Active"
@@ -15,8 +13,6 @@
             "id": 4,
             "code": "E",
             "value": "East",
-            "type": "Zone",
-            "description": "Zone Master Entries",
             "effectiveStartDate": "2017-11-30",
             "effectiveEndDate": "2019-11-30",
             "status": "Inactive"
@@ -25,8 +21,6 @@
             "id": 5,
             "code": "N",
             "value": "North",
-            "type": "Zone",
-            "description": "Zone Master Entries",
             "effectiveStartDate": "2017-11-30",
             "effectiveEndDate": "2019-11-30",
             "status": "Active"
@@ -35,8 +29,6 @@
             "id": 6,
             "code": "S",
             "value": "South",
-            "type": "Zone",
-            "description": "Zone Master Entries",
             "effectiveStartDate": "2017-11-30",
             "effectiveEndDate": "2019-11-30",
             "status": "Active"

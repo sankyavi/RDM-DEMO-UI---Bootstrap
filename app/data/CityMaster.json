@@ -1,41 +1,43 @@
 {
     "name": "City Master",
     "link": {
-        "linkType": "State",
+        "linkType": "Zone",
         "values": [
             {
+                "linkId": 3,
+                "linkName": "West"
+            },
+            {
+                "linkId": 4,
+                "linkName": "East"
+            },
+            {
                 "linkId": 5,
-                "linkName": "Tamil Nadu"
+                "linkName": "North"
             },
             {
                 "linkId": 6,
-                "linkName": "Maharastra"
+                "linkName": "South"
             }
         ]
     },
     "references": [
         {
             "id": 7,
-            "code": "CHN",
+            "code": "1",
             "value": "Chennai",
-            "type": "City",
-            "linkid": 5,
-            "description": "City Master Entries",
-            "effectiveStartDate": "11/01/2017",
-            "effectiveEndDate": "11/01/2019",
-            "status": "Inactive"
+            "effectiveStartDate": "2017-10-31",
+            "effectiveEndDate": "2019-10-31",
+            "status": "Active"
         },
         {
             "id": 8,
-            "code": "MUM",
+            "code": "2",
             "value": "Mumbai",
-            "type": "City",
-            "linkid": 6,
-            "description": "City Master Entries",
-            "effectiveStartDate": "12/01/2017",
-            "effectiveEndDate": "12/01/2019",
-            "status": "Active"
+            "effectiveStartDate": "2017-11-30",
+            "effectiveEndDate": "2019-11-30",
+            "status": "Inactive"
         }
     ],
-    "noofreferences": 2
+    "totalreferences": 27
 }
