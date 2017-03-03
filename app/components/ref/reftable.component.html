@@ -5,7 +5,7 @@
     <a class="breadcrumb-item" [routerLink]="['/home']">Dashboard</a>
     <a class="breadcrumb-item" [routerLink]="['/home']">Admin</a>
     <a class="breadcrumb-item" [routerLink]="['/dashboard']">Masters</a>
-    <span class="breadcrumb-item active">Edit Masters</span>
+    <span class="breadcrumb-item active">Edit Master</span>
   </nav>
 
   <div class="card">
@@ -98,7 +98,7 @@
       </fieldset>
     </form>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered" *ngIf="!linkflag">
       <thead class="thead-inverse">
         <tr>
           <th>{{master_type + ' Code'}}</th>

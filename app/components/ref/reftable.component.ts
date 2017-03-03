@@ -79,42 +79,19 @@ export class RefTableComponent {
 
   private ngOnInit() {
     this._routeParams.params
-      .subscribe(
-      params => {
-        //params => params['id']
-        this.id = params['id'];
-        this.id2 = params['id2'];
-        console.info("params1"+this.id);
-      console.info("params1"+this.id2);
-      }
-      )
-      // .switchMap(id => this._refService.getData(id))
-      // .retry(2)
-      // .subscribe(
-      // data => {
-      //   this.master_name = data.name;
-      //   this.link = data.link;
-      //   this.getDesc()
-      //   this.references = data.references;
-      //   this.noofrecords = data.totalreferences;
-      // },
-      // err => { console.log('err occured' + err) },
-      // () => { console.log('done' + this.id2) }
-      // )
-      console.info("params1"+this.id);
-      console.info("params1"+this.id2);
-      this._refService.getData(this.id)
+      .map( params => params['id'])
+      .switchMap(id => this._refService.getData(id))
       .retry(2)
       .subscribe(
-        data => {
-          this.master_name = data.name;
-          this.link = data.link;
-          this.getDesc()
-          this.references = data.references;
-          this.noofrecords = data.totalreferences;
-        },
-        err => { console.log('err occured' + err) },
-        () => { console.log('done' + this.id2) }
+      data => {
+        this.master_name = data.name;
+        this.link = data.link;
+        this.getDesc()
+        this.references = data.references;
+        this.noofrecords = data.totalreferences;
+      },
+      err => { console.log('err occured' + err) },
+      () => { console.log('done' + this.id2) }
       )
   }
 
@@ -161,5 +138,6 @@ export class RefTableComponent {
 
   change() {
     this.linkflag = false;
+    
   }
 }

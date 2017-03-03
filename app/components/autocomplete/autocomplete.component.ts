@@ -61,6 +61,6 @@ export class AutocompleteComponent implements OnInit {
     onClick() {
         var mastertable = this.query.split(' ').join('');
         console.log("autocomplete  :: mastertable : " + mastertable);
-        this.router.navigate(['reference-details', mastertable,""]);
+        this.router.navigate(['reference-details', mastertable]);
     }
 }

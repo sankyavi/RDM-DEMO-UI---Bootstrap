@@ -52,7 +52,7 @@ export class DashboardComponent implements OnInit {
 	goto(table: string) {
 		var mastertable = table.split(' ').join('');
 		console.log("dashboard :: mastertable : " + mastertable);
-		this.router.navigate(['/reference-details', mastertable,"chumma"]);
+		this.router.navigate(['/reference-details', mastertable]);
 	}
 
 	saveDescription() {
@@ -60,8 +60,6 @@ export class DashboardComponent implements OnInit {
 			var obj = this.masterdata[i];
 			var mastername = obj.name;
 			var masterdesc = obj.description;
-
-			
 			this._localStorageService.set(mastername, masterdesc);
 		}
 	}
