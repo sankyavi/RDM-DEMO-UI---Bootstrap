@@ -41,7 +41,7 @@ export class DashboardComponent implements OnInit {
 
 	ngOnInit() {
 		// make the service call to get master data
-		this._refService.getData("masterdata")
+		this._refService.getData("masterdata.1")
 			.subscribe(
 			data => this.masterdata = data.masterdata,
 			err => { console.log('err occured' + err) },
