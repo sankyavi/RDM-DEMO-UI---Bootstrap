@@ -1,0 +1,24 @@
+{
+    "Attributes": [
+        {
+            "id": 201,
+            "name": "Attribute1",
+            "active": true
+        },
+        {
+            "id": 202,
+            "name": "Attribute2",
+            "active": true
+        },
+        {
+            "id": 203,
+            "name": "Attribute3",
+            "active": false
+        },
+        {
+            "id": 204,
+            "name": "Attribute4",
+            "active": true
+        }
+    ]
+}

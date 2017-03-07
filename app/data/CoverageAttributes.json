@@ -1,0 +1,24 @@
+{
+    "Coverages": [
+        {
+            "id": 101,
+            "name": "Coverage1",
+            "attributes": [
+                "Attribute1",
+                "Atrribute2"
+            ],
+            "effectivedate": "2017-07-12T18:30:00.000Z",
+            "expirydate": "2019-10-06T18:30:00.000Z"
+        },
+        {
+            "id": 102,
+            "name": "Coverage2",
+            "attributes": [
+                "Attribute3",
+                "Atrribute4"
+            ],
+            "effectivedate": "2017-07-12T18:30:00.000Z",
+            "expirydate": "2019-10-06T18:30:00.000Z"
+        }
+    ]
+}
