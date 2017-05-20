@@ -1,0 +1,23 @@
+    <table class="table table-bordered" *ngIf="!linkflag">
+      <thead class="thead-inverse">
+        <tr>
+          <th>{{master_type + ' Code'}}</th>
+          <th>{{master_type + ' Name'}}</th>
+          <th>Effective Date</th>
+          <th>Expiry Date</th>
+          <th>Status</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let col of references; let i = index;">
+          <td>{{col.code}}</td>
+          <td>{{col.value}}</td>
+          <td>{{col.effectiveStartDate}}</td>
+          <td>{{col.effectiveEndDate}}</td>
+          <td [ngClass]="{ 'table-success': col.status == 'Active' , 'table-danger' : col.status == 'Inactive'}">{{col.status}}</td>
+          <td (click)="gotos(col.id)"><a>Edit</a></td>
+        </tr>
+      </tbody>
+    </table>

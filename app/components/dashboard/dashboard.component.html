@@ -10,7 +10,7 @@
         </nav>
     </div>
 
-    <autocomplete></autocomplete>
+    <autocomplete [masters]="masters" (goto)="goto($event)"></autocomplete>
 
     <div class="row">
         <h3 class="summary">Summary</h3>

@@ -120,9 +120,9 @@ export class RefTableComponent {
   }
 
   showid(num: number) {
-    var keys: string[] = this.generateKeys(this.references[num]);
-    var values: string[] = this.generateArray(this.references[num]);
-    alert("This will open edit Modal for " + keys[0] + ":" + values[0]);
+    // var keys: string[] = this.generateKeys(this.references[num]);
+    // var values: string[] = this.generateArray(this.references[num]);
+    alert("This will open edit Modal for " + num);
   }
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input , Output, EventEmitter} from '@angular/core';
 import { Router } from '@angular/router';
 
 /**
@@ -29,22 +29,24 @@ import { Router } from '@angular/router';
 
 export class AutocompleteComponent implements OnInit {
     query: string = '';
-    masters1: string[] = [];
+    @Input() masters: string[];
     filteredList: string[] = [];
+
+    @Output() goto = new EventEmitter();
 
     constructor(private router: Router) { }
 
     ngOnInit() {
-        this.masters1 = Object.keys(localStorage);
     }
 
     filter() {
+        console.log("printer auto"+this.masters.toString());
         if (this.query !== "") {
             if(this.query.length >= 2){
-                this.filteredList = this.masters1.filter(function (el: string) {
-                    //return el.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
+                this.filteredList = this.masters.filter(function (el: string) {
+                    return el.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
                     // use above if polyfill required for below
-                    return el.toLowerCase().includes(this.query.toLowerCase());
+                   // return el.toLowerCase().includes(this.query.toLowerCase());
                 }.bind(this));
             }
         } else {
@@ -62,5 +64,9 @@ export class AutocompleteComponent implements OnInit {
         var mastertable = this.query.split(' ').join('');
         console.log("autocomplete  :: mastertable : " + mastertable);
         this.router.navigate(['reference-details', mastertable]);
+    }
+
+    gotos() {
+        this.goto.emit(this.query);
     }
 }

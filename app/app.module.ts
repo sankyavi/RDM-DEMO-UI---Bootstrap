@@ -9,6 +9,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RefTableComponent }  from './components/ref/reftable.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import { DummyComponent } from './components/dummy/dummy.component';
+import { MasterinfoComponent } from './components/common/masterinfo.component';
+import { TableComponent } from './components/common/table.component';
 // user defined misc imports
 import { RefService } from './services/ref.service';
 import { LocalStorageService } from './services/localstorage.service';
@@ -30,7 +32,9 @@ import { appRouting } from './app.routing';
     RefTableComponent,
     DashboardComponent,
     AutocompleteComponent,
-    DummyComponent
+    DummyComponent,
+    MasterinfoComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

@@ -35,6 +35,7 @@ import { LocalStorageService } from '/app/services/localstorage.service';
 export class DashboardComponent implements OnInit {
 
 	masterdata: { name: string, description: string }[] = [];
+	masters: string[] ;
 
 	constructor(private router: Router, private _localStorageService: LocalStorageService,
 		private _refService: RefService) { }
@@ -62,5 +63,12 @@ export class DashboardComponent implements OnInit {
 			var masterdesc = obj.description;
 			this._localStorageService.set(mastername, masterdesc);
 		}
+
+		this.masters = this.masterdata.map(function(a) {return a.name;});
+					console.log("printing"+this.masters);
 	}
+
+	// newgo($event){
+	// 	console.log($event);
+	// }
 }

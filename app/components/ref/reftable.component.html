@@ -10,21 +10,8 @@
 
   <div class="card">
 
-    <div class="form-group row">
-      <label for="example-text-input" class="col-2 col-form-label">Master Name</label>
-      <div class="col-10">
-        <input class="form-control" type="text" value="{{master_name}}" id="example-text-input" disabled>
-      </div>
-    </div>
 
-
-    <div class="form-group row">
-      <label for="example-text-input" class="col-2 col-form-label">Master Description</label>
-      <div class="col-10">
-        <input class="form-control" type="text" value="{{master_desc}}" id="example-text-input" disabled>
-      </div>
-    </div>
-
+<masterinfo [name]="master_name" [description]="master_desc"></masterinfo>
 
     <div class="col-6" *ngIf="linkflag">
       <div class="form-group">
@@ -98,29 +85,7 @@
       </fieldset>
     </form>
 
-    <table class="table table-bordered" *ngIf="!linkflag">
-      <thead class="thead-inverse">
-        <tr>
-          <th>{{master_type + ' Code'}}</th>
-          <th>{{master_type + ' Name'}}</th>
-          <th>Effective Date</th>
-          <th>Expiry Date</th>
-          <th>Status</th>
-          <th>Edit</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr *ngFor="let col of references; let i = index;">
-          <td>{{col.code}}</td>
-          <td>{{col.value}}</td>
-          <td>{{col.effectiveStartDate}}</td>
-          <td>{{col.effectiveEndDate}}</td>
-          <td [ngClass]="{ 'table-success': col.status == 'Active' , 'table-danger' : col.status == 'Inactive'}">{{col.status}}</td>
-          <td (click)="showid(i)"><a>Edit</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <app-table [master_type]="master_type" [linkflag]='linkflag' [references]='references' (goto)="showid($event)"></app-table>
 
   </div>
 </div>
